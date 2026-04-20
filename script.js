@@ -1,3 +1,4 @@
+
 let lastScroll = 0;
 const navbar = document.getElementById("navbar");
 const btn = document.getElementById("menu-btn");
@@ -48,19 +49,19 @@ window.addEventListener("scroll", () => {
 });
 
 document.addEventListener("click", (e) => {
-    if (!menuOpen) return;
+  if (!menuOpen) return;
 
-    const isClickInsideMenu = menu.contains(e.target);
-    const isClickButton = btn.contains(e.target);
+  const isClickInsideMenu = menu.contains(e.target);
+  const isClickButton = btn.contains(e.target);
 
-    if (!isClickButton && !isClickButton) {
-        menu.classList.add("hidden");
-        menuOpen = false;
-        document.body.classList.remove("overflow-hidden");
+  if (!isClickButton && !isClickButton) {
+    menu.classList.add("hidden");
+    menuOpen = false;
+    document.body.classList.remove("overflow-hidden");
 
-        navbar.classList.remove("nav-hide");
-        navbar.classList.add("nav-show");
-    }
+    navbar.classList.remove("nav-hide");
+    navbar.classList.add("nav-show");
+  }
 });
 
 // Wa Btn
@@ -78,3 +79,62 @@ buttons.forEach((btn) => {
     window.open(url, "_blank");
   });
 });
+
+// form Wa
+const form = document.getElementById("form-order");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const alamat = document.getElementById("alamat").value;
+  const paket = document.getElementById("paket").value;
+  const berat = document.getElementById("berat").value;
+  const total = totalEl.textContent;
+
+  if (berat < 1) {
+    alert("Minimal 1kg");
+    return;
+  }
+
+  const nomor = "6289502191091";
+
+  const pesan = `Halo, saya mau laundry:
+
+Nama: ${nama}
+Alamat: ${alamat}
+Paket: ${paket}
+Berat: ${berat} kg
+Total: Rp ${total}`;
+
+  const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+  window.open(url, "_blank");
+  setTimeout(() => {
+    form.reset();
+  }, 500);
+});
+
+const paketSelect = document.getElementById("paket");
+const beratInput = document.getElementById("berat");
+const totalEl = document.getElementById("total");
+
+// harga per kg
+const harga = {
+  "Cuci Kering": 5000,
+  "Cuci + Setrika": 7000,
+  Express: 10000,
+};
+
+function hitungTotal() {
+  const paket = paketSelect.value;
+  const berat = parseFloat(beratInput.value) || 0;
+
+  const total = harga[paket] * berat;
+
+  totalEl.textContent = total.toLocaleString("id-ID");
+}
+
+// event realtime
+paketSelect.addEventListener("change", hitungTotal);
+beratInput.addEventListener("input", hitungTotal);

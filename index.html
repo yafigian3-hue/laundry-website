@@ -181,79 +181,116 @@
       </div>
     </nav>
 
-    <section class="relative bg-blue-600 text-white py-20">
-      <!-- overlay -->
-      <div class="absolute inset-0 bg-black opacity-30"></div>
+    <section
+      class="relative bg-gradient-to-r from-blue-600 to-blue-500 text-white py-24 overflow-hidden"
+    >
+      <!-- blur background -->
+      <div
+        class="absolute w-96 h-96 bg-white opacity-10 rounded-full -top-20 -left-20 blur-3xl"
+      ></div>
 
-      <!-- content -->
       <div class="relative container mx-auto text-center px-6">
         <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-          Laundry Cepat & Bersih di Purbalingga
+          Laundry Cepat & Bersih Tanpa Ribet
         </h1>
+
         <p class="mb-6 text-lg opacity-90">
           Antar jemput gratis • Selesai dalam 24 jam
         </p>
 
-        <a
-          href="#"
-          class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 shadow-lg"
-        >
-          Pesan Sekarang
-        </a>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <a
+            href="#kontak"
+            class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:scale-105 transition"
+          >
+            Pesan Sekarang
+          </a>
+
+          <a
+            href="#harga"
+            class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition"
+          >
+            Lihat Harga
+          </a>
+        </div>
       </div>
     </section>
 
-    <section id="harga" class="py-16 bg-gray-100">
+    <section id="harga" class="py-20 bg-gray-100">
       <div class="container mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-10">Paket Laundry</h2>
+        <h2 class="text-3xl font-bold mb-12">Paket Laundry</h2>
 
-        <div class="grid md:grid-cols-3 gap-6 px-6">
+        <div class="grid md:grid-cols-3 gap-8 px-6">
+          <!-- CARD -->
           <div
-            class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+            class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition hover:-translate-y-2"
           >
-            <h3 class="text-xl font-bold mb-2 text-blue-600">Cuci Kering</h3>
-            <p class="mb-4 text-2xl font-bold">Rp5.000</p>
-            <p class="text-sm text-gray-500 mb-4">per kg</p>
+            <h3 class="text-xl font-semibold mb-2">Cuci Kering</h3>
+            <p class="text-4xl font-bold text-blue-600 mb-2">5K</p>
+            <p class="text-gray-500 mb-6">/ kg</p>
 
-            <a
-              href="#"
-              class="btn-wa bg-blue-600 text-white px-4 py-2 rounded"
+            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+              <li>✔️ Dicuci bersih</li>
+              <li>✔️ Wangi tahan lama</li>
+              <li>✔️ Estimasi 2 hari</li>
+            </ul>
+
+            <button
+              class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
               data-paket="Cuci Kering"
             >
-              Pesan
-            </a>
+              Pilih Paket
+            </button>
           </div>
 
+          <!-- BEST -->
           <div
-            class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+            class="bg-blue-600 text-white p-8 rounded-2xl shadow-xl scale-105 relative"
           >
-            <h3 class="text-xl font-bold mb-2 text-blue-600">Cuci + Setrika</h3>
-            <p class="mb-4 text-2xl font-bold">Rp7.000</p>
-            <p class="text-sm text-gray-500 mb-4">per kg</p>
+            <span
+              class="absolute top-0 right-0 bg-white text-blue-600 text-xs px-3 py-1 rounded-bl-lg"
+            >
+              POPULER
+            </span>
 
-            <a
-              href="#"
-              class="btn-wa bg-blue-600 text-white px-4 py-2 rounded"
+            <h3 class="text-xl font-semibold mb-2">Cuci + Setrika</h3>
+            <p class="text-4xl font-bold mb-2">7K</p>
+            <p class="opacity-80 mb-6">/ kg</p>
+
+            <ul class="text-sm space-y-2 mb-6">
+              <li>✔️ Siap pakai</li>
+              <li>✔️ Rapi & wangi</li>
+              <li>✔️ Hemat waktu</li>
+            </ul>
+
+            <button
+              class="btn-wa w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-gray-200 transition"
               data-paket="Cuci + Setrika"
             >
-              Pesan
-            </a>
+              Pilih Paket
+            </button>
           </div>
 
+          <!-- EXPRESS -->
           <div
-            class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+            class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition hover:-translate-y-2"
           >
-            <h3 class="text-xl font-bold mb-2 text-blue-600">Express</h3>
-            <p class="mb-4 text-2xl font-bold">Rp10.000</p>
-            <p class="text-sm text-gray-500 mb-4">per kg</p>
+            <h3 class="text-xl font-semibold mb-2">Express</h3>
+            <p class="text-4xl font-bold text-blue-600 mb-2">10K</p>
+            <p class="text-gray-500 mb-6">/ kg</p>
 
-            <a
-              href="#"
-              class="btn-wa bg-blue-600 text-white px-4 py-2 rounded"
+            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+              <li>✔️ Selesai 24 jam</li>
+              <li>✔️ Prioritas utama</li>
+              <li>✔️ Anti ribet</li>
+            </ul>
+
+            <button
+              class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
               data-paket="Express"
             >
-              Pesan
-            </a>
+              Pilih Paket
+            </button>
           </div>
         </div>
       </div>
@@ -313,9 +350,9 @@
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <!-- KIRI: MAP -->
           <div class="bg-white p-3 rounded-xl shadow-lg">
-            <div class="w-full relative" style="padding-top: 70%">
+            <div class="w-full relative" style="padding-top: 100%">
               <iframe
-                class="absolute top-0 left-0 w-full h-full rounded"
+                class="absolute top-0 left-0 w-full h-full"
                 src="https://maps.google.com/maps?q=purbalingga&t=&z=13&ie=UTF8&iwloc=&output=embed"
               >
               </iframe>
@@ -323,8 +360,8 @@
           </div>
 
           <!-- KANAN: KONTAK -->
-          <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg">
-            <h2 class="text-3xl font-bold mb-4 text-blue-600">Hubungi Kami</h2>
+          <div class="bg-white text-gray-800 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-1 text-blue-600">Hubungi Kami</h2>
 
             <p class="mb-6 text-gray-600">
               Siap bantu laundry kamu lebih cepat & bersih. Hubungi kami
@@ -338,13 +375,48 @@
               <p>🚚 <span class="font-medium">Antar jemput gratis</span></p>
             </div>
 
-            <!-- CTA -->
-            <a
-              href="https://wa.me/628xxxxxxx?text=Halo%20saya%20mau%20laundry"
-              class="block text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow"
-            >
-              Chat WhatsApp Sekarang
-            </a>
+            <form id="form-order" class="space-y-3">
+              <input
+                type="text"
+                id="nama"
+                placeholder="Nama"
+                required
+                class="w-full p-3 rounded border"
+              />
+
+              <input
+                type="text"
+                id="alamat"
+                placeholder="Alamat"
+                required
+                class="w-full p-3 rounded border"
+              />
+
+              <select id="paket" class="w-full p-3 rounded border">
+                <option value="Cuci Kering">Cuci Kering</option>
+                <option value="Cuci + Setrika">Cuci + Setrika</option>
+                <option value="Express">Express</option>
+              </select>
+
+              <input
+                type="number"
+                id="berat"
+                placeholder="Berat (kg)"
+                required
+                class="w-full p-3 rounded border"
+              />
+
+              <p class="text-lg font-semibold text-blue-600">
+                Total: Rp <span id="total">0</span>
+              </p>
+
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700"
+              >
+                Kirim ke WhatsApp
+              </button>
+            </form>
           </div>
         </div>
       </div>
