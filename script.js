@@ -26,20 +26,16 @@ window.addEventListener("scroll", () => {
 
   let currentScroll = window.scrollY;
 
-  // ignore gerakan kecil
   if (Math.abs(currentScroll - lastScroll) < 10) return;
 
-  // kalau masih di atas → selalu tampil
   if (currentScroll < 80) {
     navbar.classList.remove("nav-hide");
     navbar.classList.add("nav-show");
   }
-  // scroll ke bawah
   else if (currentScroll > lastScroll) {
     navbar.classList.add("nav-hide");
     navbar.classList.remove("nav-show");
   }
-  // scroll ke atas
   else {
     navbar.classList.remove("nav-hide");
     navbar.classList.add("nav-show");
@@ -119,7 +115,6 @@ const paketSelect = document.getElementById("paket");
 const beratInput = document.getElementById("berat");
 const totalEl = document.getElementById("total");
 
-// harga per kg
 const harga = {
   "Cuci Kering": 5000,
   "Cuci + Setrika": 7000,
