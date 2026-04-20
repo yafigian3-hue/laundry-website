@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Laundry Kilat</title>
+    <meta name="description" content="Laundry Kilat" />
+    <meta name="keywords" content="Laundry,cuci,baju,celana,kotor" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .fade-enter {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      .fade-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 500ms ease;
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .work-sans {
+        font-family: "Work Sans", sans-serif;
+      }
+
+      #menu-toggle:checked + #menu {
+        display: block;
+      }
+
+      .hover\:grow {
+        transition: all 0.3s;
+        transform: scale(1);
+      }
+
+      .hover\:grow:hover {
+        transform: scale(1.02);
+      }
+
+      .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+      }
+
+      .carousel-item {
+        -webkit-transition: opacity 0.6s ease-out;
+        transition: opacity 0.6s ease-out;
+      }
+
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3 {
+        display: block;
+      }
+
+      .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+      }
+
+      #carousel-1:checked
+        ~ .control-1
+        ~ .carousel-indicators
+        li:nth-child(1)
+        .carousel-bullet,
+      #carousel-2:checked
+        ~ .control-2
+        ~ .carousel-indicators
+        li:nth-child(2)
+        .carousel-bullet,
+      #carousel-3:checked
+        ~ .control-3
+        ~ .carousel-indicators
+        li:nth-child(3)
+        .carousel-bullet {
+        color: #000;
+        /*Set to match the Tailwind colour you want the active one to be */
+      }
+
+      /* animasi navbar */
+      .nav-hide {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      .nav-show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* optional biar smooth */
+      #navbar {
+        transition: all 0.3s ease;
+      }
+
+      #menu {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-50 text-gray-700 work-sans leading-normal text-base tracking-normal"
+  >
+    <!--Nav-->
+    <nav
+      id="navbar"
+      class="w-full bg-white shadow sticky top-0 z-50 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center font-bold text-blue-600 text-xl">
+          <span class="text-2xl mr-2">🫧</span>
+          Laundry<span class="text-gray-800">Kilat</span>
+        </a>
+
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+          <li><a href="#" class="hover:text-blue-600 transition">Home</a></li>
+          <li>
+            <a href="#harga" class="hover:text-blue-600 transition">Harga</a>
+          </li>
+          <li>
+            <a href="#tentang" class="hover:text-blue-600 transition"
+              >Tentang Kami</a
+            >
+          </li>
+          <li>
+            <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+          </li>
+        </ul>
+
+        <!-- CTA -->
+        <a
+          href="https://wa.me/628xxxxxxx"
+          class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          WhatsApp
+        </a>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" class="md:hidden text-gray-700 text-2xl">
+          ☰
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="menu" class="hidden md:hidden px-6 pb-4">
+        <ul class="space-y-3 text-gray-700">
+          <li><a href="#" class="block">Home</a></li>
+          <li><a href="#harga" class="block">Harga</a></li>
+          <li><a href="#testimoni" class="block">Testimoni</a></li>
+          <li><a href="#kontak" class="block">Kontak</a></li>
+          <li>
+            <a
+              href="https://wa.me/628xxxxxxx"
+              class="block bg-blue-600 text-white text-center py-2 rounded"
+            >
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="relative bg-blue-600 text-white py-20">
+      <!-- overlay -->
+      <div class="absolute inset-0 bg-black opacity-30"></div>
+
+      <!-- content -->
+      <div class="relative container mx-auto text-center px-6">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+          Laundry Cepat & Bersih di Purbalingga
+        </h1>
+        <p class="mb-6 text-lg opacity-90">
+          Antar jemput gratis • Selesai dalam 24 jam
+        </p>
+
+        <a
+          href="#"
+          class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 shadow-lg"
+        >
+          Pesan Sekarang
+        </a>
+      </div>
+    </section>
+
+    <section id="harga" class="py-16 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-10">Paket Laundry</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 px-6">
+          <div
+            class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-bold mb-2 text-blue-600">Cuci Kering</h3>
+            <p class="mb-4 text-2xl font-bold">Rp5.000</p>
+            <p class="text-sm text-gray-500 mb-4">per kg</p>
+
+            <a
+              href="#"
+              class="btn-wa bg-blue-600 text-white px-4 py-2 rounded"
+              data-paket="Cuci Kering"
+            >
+              Pesan
+            </a>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-bold mb-2 text-blue-600">Cuci + Setrika</h3>
+            <p class="mb-4 text-2xl font-bold">Rp7.000</p>
+            <p class="text-sm text-gray-500 mb-4">per kg</p>
+
+            <a
+              href="#"
+              class="btn-wa bg-blue-600 text-white px-4 py-2 rounded"
+              data-paket="Cuci + Setrika"
+            >
+              Pesan
+            </a>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+          >
+            <h3 class="text-xl font-bold mb-2 text-blue-600">Express</h3>
+            <p class="mb-4 text-2xl font-bold">Rp10.000</p>
+            <p class="text-sm text-gray-500 mb-4">per kg</p>
+
+            <a
+              href="#"
+              class="btn-wa bg-blue-600 text-white px-4 py-2 rounded"
+              data-paket="Express"
+            >
+              Pesan
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" class="py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-8">Kenapa Pilih Kami?</h2>
+
+        <div class="grid md:grid-cols-4 gap-6 px-6 text-center">
+          <div class="bg-white p-6 rounded shadow">
+            <p class="text-3xl mb-2">🚚</p>
+            <p>Antar jemput gratis</p>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow">
+            <p class="text-3xl mb-2">🌸</p>
+            <p>Wangi tahan lama</p>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow">
+            <p class="text-3xl mb-2">⚡</p>
+            <p>Bisa express</p>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow">
+            <p class="text-3xl mb-2">🧺</p>
+            <p>Aman & rapi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-8">Testimoni</h2>
+
+        <div class="grid md:grid-cols-2 gap-6 px-6">
+          <div class="bg-white p-6 rounded shadow">
+            <p class="italic mb-3">"Laundry saya selalu bersih dan cepat!"</p>
+            <p class="font-bold text-blue-600">- Budi</p>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow">
+            <p class="italic mb-3">"Pelayanan ramah dan wangi banget!"</p>
+            <p class="font-bold text-blue-600">- Sari</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="kontak"
+      class="py-20 bg-gradient-to-r from-blue-600 to-blue-500 text-white"
+    >
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <!-- KIRI: MAP -->
+          <div class="bg-white p-3 rounded-xl shadow-lg">
+            <div class="w-full relative" style="padding-top: 70%">
+              <iframe
+                class="absolute top-0 left-0 w-full h-full rounded"
+                src="https://maps.google.com/maps?q=purbalingga&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- KANAN: KONTAK -->
+          <div class="bg-white text-gray-800 p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold mb-4 text-blue-600">Hubungi Kami</h2>
+
+            <p class="mb-6 text-gray-600">
+              Siap bantu laundry kamu lebih cepat & bersih. Hubungi kami
+              sekarang.
+            </p>
+
+            <!-- INFO -->
+            <div class="space-y-3 mb-6 text-sm">
+              <p>📍 <span class="font-medium">Purbalingga</span></p>
+              <p>🕒 <span class="font-medium">08.00 – 21.00</span></p>
+              <p>🚚 <span class="font-medium">Antar jemput gratis</span></p>
+            </div>
+
+            <!-- CTA -->
+            <a
+              href="https://wa.me/628xxxxxxx?text=Halo%20saya%20mau%20laundry"
+              class="block text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow"
+            >
+              Chat WhatsApp Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
