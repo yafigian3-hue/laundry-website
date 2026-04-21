@@ -1,4 +1,3 @@
-
 let lastScroll = 0;
 const navbar = document.getElementById("navbar");
 const btn = document.getElementById("menu-btn");
@@ -31,12 +30,10 @@ window.addEventListener("scroll", () => {
   if (currentScroll < 80) {
     navbar.classList.remove("nav-hide");
     navbar.classList.add("nav-show");
-  }
-  else if (currentScroll > lastScroll) {
+  } else if (currentScroll > lastScroll) {
     navbar.classList.add("nav-hide");
     navbar.classList.remove("nav-show");
-  }
-  else {
+  } else {
     navbar.classList.remove("nav-hide");
     navbar.classList.add("nav-show");
   }
@@ -50,7 +47,7 @@ document.addEventListener("click", (e) => {
   const isClickInsideMenu = menu.contains(e.target);
   const isClickButton = btn.contains(e.target);
 
-  if (!isClickButton && !isClickButton) {
+  if (!isClickInsideMenu && !isClickButton) {
     menu.classList.add("hidden");
     menuOpen = false;
     document.body.classList.remove("overflow-hidden");

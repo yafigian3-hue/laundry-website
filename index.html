@@ -182,15 +182,20 @@
     </nav>
 
     <section
-      class="relative bg-gradient-to-r from-blue-600 to-blue-500 text-white py-24 overflow-hidden"
+      class="relative h-screen flex items-center justify-center text-white"
     >
-      <!-- blur background -->
-      <div
-        class="absolute w-96 h-96 bg-white opacity-10 rounded-full -top-20 -left-20 blur-3xl"
-      ></div>
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="img/530075322400240722044228.jpeg"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
 
-      <div class="relative container mx-auto text-center px-6">
-        <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+      <!-- Content -->
+      <div class="relative text-center px-6 max-w-2xl">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">
           Laundry Cepat & Bersih Tanpa Ribet
         </h1>
 
@@ -201,7 +206,7 @@
         <div class="flex justify-center gap-4 flex-wrap">
           <a
             href="#kontak"
-            class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow hover:scale-105 transition"
+            class="bg-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow"
           >
             Pesan Sekarang
           </a>
@@ -221,76 +226,99 @@
         <h2 class="text-3xl font-bold mb-12">Paket Laundry</h2>
 
         <div class="grid md:grid-cols-3 gap-8 px-6">
-          <!-- CARD -->
+          <!-- CARD 1 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition hover:-translate-y-2"
+            class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden hover:-translate-y-2"
           >
-            <h3 class="text-xl font-semibold mb-2">Cuci Kering</h3>
-            <p class="text-4xl font-bold text-blue-600 mb-2">5K</p>
-            <p class="text-gray-500 mb-6">/ kg</p>
+            <img
+              src="img/XwiuZS029kU02HLmyvjqpWPeQyrQwR8BAGrmYoKu.jpg"
+              class="w-full h-44 object-cover"
+            />
 
-            <ul class="text-sm text-gray-600 space-y-2 mb-6">
-              <li>✔️ Dicuci bersih</li>
-              <li>✔️ Wangi tahan lama</li>
-              <li>✔️ Estimasi 2 hari</li>
-            </ul>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Cuci Kering</h3>
+              <p class="text-3xl font-bold text-blue-600 mb-1">Rp5.000</p>
+              <p class="text-gray-500 mb-4 text-sm">/ kg</p>
 
-            <button
-              class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-              data-paket="Cuci Kering"
-            >
-              Pilih Paket
-            </button>
+              <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                <li>✔️ Dicuci bersih</li>
+                <li>✔️ Wangi tahan lama</li>
+                <li>✔️ Estimasi 2 hari</li>
+              </ul>
+
+              <button
+                class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+                data-paket="Cuci Kering"
+              >
+                Pilih Paket
+              </button>
+            </div>
           </div>
 
-          <!-- BEST -->
+          <!-- CARD 2 (BEST) -->
           <div
-            class="bg-blue-600 text-white p-8 rounded-2xl shadow-xl scale-105 relative"
+            class="bg-white rounded-2xl shadow-xl overflow-hidden scale-105 border-2 border-blue-600 relative"
           >
             <span
-              class="absolute top-0 right-0 bg-white text-blue-600 text-xs px-3 py-1 rounded-bl-lg"
+              class="absolute top-0 right-0 bg-blue-600 text-white text-xs px-3 py-1 rounded-bl-lg"
             >
               POPULER
             </span>
 
-            <h3 class="text-xl font-semibold mb-2">Cuci + Setrika</h3>
-            <p class="text-4xl font-bold mb-2">7K</p>
-            <p class="opacity-80 mb-6">/ kg</p>
+            <img
+              src="img/1766113216881_6f4c4597-f6b6-4361-af0d-735c2f83e644.png"
+              class="w-full h-44 object-cover"
+            />
 
-            <ul class="text-sm space-y-2 mb-6">
-              <li>✔️ Siap pakai</li>
-              <li>✔️ Rapi & wangi</li>
-              <li>✔️ Hemat waktu</li>
-            </ul>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-blue-600">
+                Cuci + Setrika
+              </h3>
+              <p class="text-3xl font-bold text-blue-600 mb-1">Rp7.000</p>
+              <p class="text-gray-500 mb-4 text-sm">/ kg</p>
 
-            <button
-              class="btn-wa w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-gray-200 transition"
-              data-paket="Cuci + Setrika"
-            >
-              Pilih Paket
-            </button>
+              <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                <li>✔️ Siap pakai</li>
+                <li>✔️ Rapi & wangi</li>
+                <li>✔️ Hemat waktu</li>
+              </ul>
+
+              <button
+                class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+                data-paket="Cuci + Setrika"
+              >
+                Pilih Paket
+              </button>
+            </div>
           </div>
 
-          <!-- EXPRESS -->
+          <!-- CARD 3 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition hover:-translate-y-2"
+            class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden hover:-translate-y-2"
           >
-            <h3 class="text-xl font-semibold mb-2">Express</h3>
-            <p class="text-4xl font-bold text-blue-600 mb-2">10K</p>
-            <p class="text-gray-500 mb-6">/ kg</p>
+            <img
+              src="img/d47c594e0aabef376f8f4a38065e9121.jpg"
+              class="w-full h-44 object-cover"
+            />
 
-            <ul class="text-sm text-gray-600 space-y-2 mb-6">
-              <li>✔️ Selesai 24 jam</li>
-              <li>✔️ Prioritas utama</li>
-              <li>✔️ Anti ribet</li>
-            </ul>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Express</h3>
+              <p class="text-3xl font-bold text-blue-600 mb-1">Rp10.000</p>
+              <p class="text-gray-500 mb-4 text-sm">/ kg</p>
 
-            <button
-              class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-              data-paket="Express"
-            >
-              Pilih Paket
-            </button>
+              <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                <li>✔️ Selesai 24 jam</li>
+                <li>✔️ Prioritas utama</li>
+                <li>✔️ Anti ribet</li>
+              </ul>
+
+              <button
+                class="btn-wa w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+                data-paket="Express"
+              >
+                Pilih Paket
+              </button>
+            </div>
           </div>
         </div>
       </div>
